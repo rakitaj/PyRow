@@ -166,8 +166,8 @@ Include PyRow in your code with the following line of code:
 
     command = ['CSAFE_GETPACE_CMD',]
     result = erg.send(command)
-    print "Stroke Pace = " + str(result['CSAFE_GETPACE_CMD'][0])
-    print "Stroke Units = " + str(result['CSAFE_GETPACE_CMD'][1])
+    print("Stroke Pace = " + str(result['CSAFE_GETPACE_CMD'][0]))
+    print("Stroke Units = " + str(result['CSAFE_GETPACE_CMD'][1]))
 
 ## FILES
 `strokelog.py` - an example program that records time, distance, strokes per min, pace, and force plot data for each stroke to a csv file

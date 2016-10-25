@@ -61,7 +61,7 @@ Include PyRow in your code with the following line of code:
 
 ---------------------------------------
 
-`pyrow.pyrow.getStatus()` - returns status of machine as a number
+`pyrow.pyrow.get_status()` - returns status of machine as a number
   - 0 = 'Error'
   - 1 = 'Ready'
   - 2 = 'Idle'

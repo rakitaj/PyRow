@@ -1,8 +1,8 @@
 #!/usr/bin/env python
-#Copyright (c) 2011, Sam Gambrell
-#Licensed under the Simplified BSD License.
-#NOTE: This code has not been thoroughly tested and may not function as advertised.
-#   Please report and findings to the author so that they may be addressed in a stable release.
+# Copyright (c) 2011, Sam Gambrell
+# Licensed under the Simplified BSD License.
+# NOTE: This code has not been thoroughly tested and may not function as advertised.
+# Please report and findings to the author so that they may be addressed in a stable release.
 
 
 import usb.core
@@ -14,8 +14,9 @@ import time
 import sys
 
 C2_VENDOR_ID = 0x17a4
-MIN_FRAME_GAP = .050 #in seconds
+MIN_FRAME_GAP = .050  # in seconds
 INTERFACE = 0
+
 
 def find():
     ergs = usb.core.find(find_all=True, idVendor=C2_VENDOR_ID)
@@ -33,7 +34,7 @@ class pyrow(object):
 
         if sys.platform != 'win32':
             try:
-                #Check to see if driver is attached to kernel (linux)
+                # Check to see if driver is attached to kernel (linux)
                 if erg.is_kernel_driver_active(INTERFACE):
                     erg.detach_kernel_driver(INTERFACE)
                 else:
@@ -41,13 +42,13 @@ class pyrow(object):
             except:
                 print("EXCEPTION")
 
-        #Claim interface (Needs Testing To See If Necessary)
+        # Claim interface (Needs Testing To See If Necessary)
         usb.util.claim_interface(erg, INTERFACE)
 
-        #Linux throws error, reason unknown
+        # Linux throws error, reason unknown
         try:
-            erg.set_configuration() #required to configure USB connection
-            #Ubuntu Linux returns 'usb.core.USBError: Resource busy' but rest of code still works
+            erg.set_configuration()  # required to configure USB connection
+            # Ubuntu Linux returns 'usb.core.USBError: Resource busy' but rest of code still works
         except Exception as e:
             if not isinstance(e, USBError):
                 raise e

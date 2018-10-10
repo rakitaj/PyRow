@@ -28,7 +28,7 @@ Licensed under the Simplified BSD License.
 ## REQUIREMENTS
 PyRow has been tested on an Ubuntu machine with the software versions listed below, PyRow should be able to work on any machine that can run Python & PyUSB but this has not been tested and confirmed.
 
-- [Python](http://python.org/) (Tested with 2.7.2)
+- [Python](http://python.org/) (Tested with 3.7.0)
 - [libusb](http://www.libusb.org/)
 
         sudo apt-get install libudev-dev libusb-dev python

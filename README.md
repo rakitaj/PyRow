@@ -98,7 +98,7 @@ Include PyRow in your code with the following line of code:
 
 ---------------------------------------
 
-`pyrow.pyrow.getWorkout()` - returns data related to the overall workout in dictionary format, keys listed below with descriptions
+`pyrow.pyrow.get_workout()` - returns data related to the overall workout in dictionary format, keys listed below with descriptions
   - userid = User ID
   - type = Workout Type
   - state = Workout State
